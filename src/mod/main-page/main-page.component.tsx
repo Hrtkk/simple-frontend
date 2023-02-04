@@ -7,6 +7,9 @@ import MainHeaderSectionComponent from "./main-header-section/main-header-sectio
 const Main = styled.div`
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
+    height: 100vh;
+    width: 100vw;
 `;
 
 const MainBody = styled.div`
