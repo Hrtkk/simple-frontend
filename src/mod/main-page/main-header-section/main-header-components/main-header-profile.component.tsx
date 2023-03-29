@@ -6,6 +6,7 @@ import { Menu, Button, MenuItem, Avatar } from "@mui/material";
 const MHProfile = styled.div`
     display: flex;
     justify-content: center;
+    justify-self: right;
     padding-right: 4rem;
 `;
 
@@ -22,31 +23,36 @@ const MainHeaderProfileComponent: React.FC = () => {
   const handleClose = () => {
     setAnchorEl(null);
   };
+  const condition = true;
 
   return (
-    <MHProfile>
-      <Button
-        aria-controls={open ? 'basic-menu' : undefined}
-        aria-haspopup="true"
-        aria-expanded={open ? 'true' : undefined}
-        onClick={handleClick}
-      >
-        <Avatar ref={avatarElement} sx={{width: '4.5rem', height: '4.5rem'}}></Avatar>
-      </Button>
-      <Menu
-        id="basic-menu"
-        anchorEl={anchorEl}
-        open={open}
-        onClose={handleClose}
-        MenuListProps={{
-        'aria-labelledby': 'basic-button',
-        }}
-      >
-        <MenuItem onClick={handleClose}>Profile</MenuItem>
-        <MenuItem onClick={handleClose}>My account</MenuItem>
-        <MenuItem onClick={handleClose}>Logout</MenuItem>
-      </Menu>
-    </MHProfile>
+    <>
+      { condition 
+        ? ( <MHProfile>
+        <Button
+          aria-controls={open ? 'basic-menu' : undefined}
+          aria-haspopup="true"
+          aria-expanded={open ? 'true' : undefined}
+          onClick={handleClick}
+        >
+          <Avatar ref={avatarElement} sx={{width: '4.5rem', height: '4.5rem'}}></Avatar>
+        </Button>
+        <Menu
+          id="basic-menu"
+          anchorEl={anchorEl}
+          open={open}
+          onClose={handleClose}
+          MenuListProps={{
+          'aria-labelledby': 'basic-button',
+          }}
+        >
+          <MenuItem onClick={handleClose}>Profile</MenuItem>
+          <MenuItem onClick={handleClose}>My account</MenuItem>
+          <MenuItem onClick={handleClose}>Logout</MenuItem>
+        </Menu>
+      </MHProfile> )
+      : <></> }
+    </>
   );
 };
 

@@ -1,0 +1,1 @@
+export const COLOR_APP_HEADER = '#E7CFBC';

@@ -1,8 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-
-const TITLE = "Hack-To-Sack";
-const SUB_TITLE = "Let's Hack to sack down the complexity.";
+import { APP_SUB_TITLE, APP_TITLE } from '../../../../config/const/constant';
 
 const MHH2 = styled.h2`
   padding: 0;
@@ -30,11 +28,11 @@ const MainHeaderTitleComponent: React.FC = () => {
   return (
     <MHTitle>
       <MHH2>
-        { TITLE }
+        { APP_TITLE }
       </MHH2>
       <MHSubtitle>
           <MHSubPara>
-            { SUB_TITLE }
+            { APP_SUB_TITLE }
           </MHSubPara>
       </MHSubtitle>
     </MHTitle>

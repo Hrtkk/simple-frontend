@@ -1,6 +1,7 @@
 import React from "react";
 import styled from 'styled-components';
 import { IMainPage } from "../../interfaces/dashboard/main-page.interface";
+import MainBodySectionComponent from "./main-body-section/main-body-section.component";
 import MainFooterSectionComponent from "./main-footer-section/main-footer-section.component";
 import MainHeaderSectionComponent from "./main-header-section/main-header-section.component";
 
@@ -12,17 +13,12 @@ const Main = styled.div`
     width: 100vw;
 `;
 
-const MainBody = styled.div`
-
-`;
 
 const MainPageComponent: React.FC = (props: IMainPage) => {
     return (
     <Main className="main-page">
         <MainHeaderSectionComponent />
-        <MainBody className="main-body" >
-            <p>This is body</p>
-        </MainBody>
+        <MainBodySectionComponent />
         <MainFooterSectionComponent />
     </Main>)
 }

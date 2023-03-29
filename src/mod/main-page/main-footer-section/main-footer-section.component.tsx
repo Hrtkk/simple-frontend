@@ -1,5 +1,6 @@
 import { IMainFooter } from "../../../interfaces/dashboard/main-footer.interface";
 import  styled from 'styled-components';
+import { MAIN_FOOTER_QUICK_NOTE } from "../../../config/const/constant";
 
 const MFooter = styled.div`
   background-color: gray;
@@ -30,8 +31,6 @@ const MFNote = styled.div`
 `;
 
 const MainFooterSectionComponent = (props: IMainFooter) => {
-  const QUICK_NOTE = "Sponsored@2023";
-
   return (
     <MFooter>
       <MFQuickLink>
@@ -58,7 +57,7 @@ const MainFooterSectionComponent = (props: IMainFooter) => {
         </MFRow>
       </MFQuickLink>
       <MFNote>
-        { QUICK_NOTE }
+        { MAIN_FOOTER_QUICK_NOTE }
       </MFNote>
     </MFooter>
   );
